@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #212121; /* Texto gris oscuro */
+}
+header {
+  background-color: #212121;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #e57e1e;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+
+nav a:hover {
+  background-color: #fb8c00;
+  color: #212121;
+  font-weight: bold;
+}
+.hero {
+  background-image: url(imagenes/imagen\ de\ la\ página.png);
+  background-size: cover;
+  background-position: top;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.5em;
+}
+
+.hero_1 {
+  background-position: top;
+  color: black;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.cta-button {
+  background-color: #212121;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.cta-button:hover {
+  background-color: #1e88e5;
+}
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.card {
+  display: none;
+
+  width: 250px;
+  margin: 15px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card h3 {
+  color: #1e88e5;
+}
+footer {
+  background-color: #212121;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.titulo {
+  font-size: 40pt;
+}
+
+.parrafo {
+  text-align: justify;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  background-color: #fb8c00;
+  text-align: center;
+}
+
+.formulario {
+  display: contents;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_contact {
+  width: 70%;
+}
+
+.label_contact {
+  display: block;
+  text-align: left;
+  padding-left: 15%;
+}
+
+.noticia-fecha {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.banner {
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.lista {
+  text-align: left;
+}
