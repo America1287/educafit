@@ -1,25 +1,53 @@
+/* Reset y estilos base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #ffffff; /* Fondo blanco */
-  color: #212121; /* Texto gris oscuro */
+  background-color: #ffffff;
+  color: #212121;
+  line-height: 1.6;
 }
+
+/* Header */
 header {
   background-color: #212121;
   color: white;
   padding: 20px;
   text-align: center;
 }
+
+.titulo {
+  font-size: clamp(24px, 5vw, 40px);
+  margin: 10px 0;
+}
+
+header h3 {
+  font-size: clamp(18px, 3vw, 24px);
+  margin: 10px 0;
+}
+
+header p {
+  font-size: clamp(14px, 2vw, 16px);
+  margin: 10px 0;
+}
+
+/* Navegación */
 nav {
   display: flex;
   justify-content: center;
   background-color: #e57e1e;
+  flex-wrap: wrap;
 }
+
 nav a {
   color: white;
   text-decoration: none;
   padding: 14px 20px;
   display: block;
+  font-size: clamp(14px, 2vw, 16px);
 }
 
 nav a:hover {
@@ -28,110 +56,384 @@ nav a:hover {
   font-weight: bold;
 }
 
+/* Hero Principal */
 .hero {
-  background-image: url(imagenes/imagen\ de\ la\ página.png);
+  background-image: url(imagenes/imagen\ de\ la\ pÃ¡gina.png);
   background-size: cover;
-  background-position: top;
+  background-position: center;
   color: white;
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
-}
-.hero h1 {
-  font-size: 2.5em;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.hero h1 {
+  font-size: clamp(24px, 4vw, 2.5em);
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: clamp(16px, 2.5vw, 20px);
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Secundario */
 .hero_1 {
   background-position: top;
   color: black;
-  padding: 80px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
+.hero_1 h1 {
+  font-size: clamp(28px, 5vw, 36px);
+  margin-bottom: 20px;
+}
+
+.hero_1 h2 {
+  font-size: clamp(24px, 4vw, 32px);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #1e88e5;
+}
+
+.hero_1 h3 {
+  font-size: clamp(20px, 3.5vw, 28px);
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #e57e1e;
+}
+
+/* Botón CTA */
 .cta-button {
   background-color: #212121;
   color: white;
   padding: 15px 30px;
   border: none;
   border-radius: 8px;
-  font-size: 1.2em;
+  font-size: clamp(16px, 2.5vw, 1.2em);
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.cta-button a {
+  color: white;
+  text-decoration: none;
+}
+
 .cta-button:hover {
   background-color: #1e88e5;
+  transform: scale(1.05);
 }
+
+/* Secciones */
 .section {
   padding: 40px 20px;
   text-align: center;
 }
-.card {
-  display: none;
 
-  width: 250px;
+.section h2 {
+  font-size: clamp(26px, 4vw, 32px);
+  margin-bottom: 30px;
+  color: #1e88e5;
+}
+
+/* Container para cards */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
   margin: 15px;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 .card h3 {
   color: #1e88e5;
+  font-size: clamp(20px, 3vw, 24px);
+  margin-bottom: 15px;
 }
-footer {
-  background-color: #212121;
+
+.card p {
+  flex-grow: 1;
+  font-size: clamp(14px, 2vw, 16px);
+  margin-bottom: 15px;
+}
+
+.card a {
+  display: inline-block;
+  background-color: #e57e1e;
   color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.titulo {
-  font-size: 40pt;
+.card a:hover {
+  background-color: #fb8c00;
 }
 
+/* Párrafos y listas */
 .parrafo {
   text-align: justify;
+  font-size: clamp(14px, 2vw, 16px);
+  margin: 15px auto;
+  max-width: 900px;
+  padding: 0 15px;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.lista {
+  text-align: left;
+  font-size: clamp(14px, 2vw, 16px);
+  max-width: 900px;
+  margin: 15px auto;
+  padding: 0 15px 0 35px;
 }
 
+.lista li {
+  margin-bottom: 10px;
+}
+
+/* Imágenes responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Sección de contacto */
 .contact {
   background-color: #fb8c00;
   text-align: center;
+  padding: 40px 20px;
+}
+
+.contact h2 {
+  font-size: clamp(26px, 4vw, 32px);
+  margin-bottom: 30px;
+  color: white;
 }
 
 .formulario {
-  display: contents;
-  justify-content: center;
-  align-items: center;
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .form_contact {
-  width: 70%;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: clamp(14px, 2vw, 16px);
+  margin-bottom: 15px;
 }
 
 .label_contact {
   display: block;
   text-align: left;
-  padding-left: 15%;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: clamp(14px, 2vw, 16px);
 }
 
-.noticia-fecha {
-  font-size: 0.9rem;
-  color: #6c757d;
+input[type="submit"] {
+  background-color: #212121;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(14px, 2vw, 16px);
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
 }
 
+input[type="submit"]:hover {
+  background-color: #1e88e5;
+}
+
+/* Footer */
+footer {
+  background-color: #212121;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+/* Blog - Banner */
 .banner {
   background: linear-gradient(135deg, #0d6efd, #6610f2);
   color: white;
-  padding: 50px 0;
+  padding: 50px 20px;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.lista {
-  text-align: left;
+.banner h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
+/* Blog - Cards de noticias */
+.noticia-fecha {
+  font-size: clamp(12px, 1.8vw, 0.9rem);
+  color: #6c757d;
+}
+
+.card-title {
+  font-size: clamp(16px, 2.5vw, 1.25rem);
+  min-height: 60px;
+}
+
+.card-text {
+  font-size: clamp(14px, 2vw, 1rem);
+}
+
+.btn {
+  font-size: clamp(12px, 2vw, 14px);
+}
+
+/* Media Queries para tablets */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .hero {
+    padding: 40px 15px;
+    min-height: 250px;
+  }
+
+  .card {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario {
+    width: 95%;
+  }
+}
+
+/* Media Queries para móviles */
+@media (max-width: 480px) {
+  header {
+    padding: 15px 10px;
+  }
+
+  nav a {
+    padding: 12px 15px;
+  }
+
+  .hero {
+    padding: 30px 10px;
+    min-height: 200px;
+  }
+
+  .hero_1 {
+    padding: 30px 10px;
+  }
+
+  .section {
+    padding: 30px 10px;
+  }
+
+  .card {
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .lista {
+    padding: 0 10px 0 25px;
+  }
+
+  .parrafo {
+    padding: 0 10px;
+  }
+
+  .contact {
+    padding: 30px 10px;
+  }
+
+  .banner {
+    padding: 30px 15px;
+  }
+}
+
+/* Mejoras de accesibilidad */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #1e88e5;
+  outline-offset: 2px;
+}
+
+/* Animaciones suaves */
+* {
+  transition: background-color 0.3s ease;
+}
+
+/* Contenedor fluido de Bootstrap */
+.container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
